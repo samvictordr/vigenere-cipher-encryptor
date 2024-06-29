@@ -1,0 +1,58 @@
+<!-- vigenere_cipher_project/templates/vigenere_cipher.html -->
+{% extends "vigenere_cipher_app/base.html" %}
+
+{% block title %}Vigenère Cipher - Encrypt/Decrypt{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4 class="card-title">Vigenère Cipher Encryption/Decryption</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" action="{% url 'vigenere_cipher' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="text" class="form-label">Text to Encrypt/Decrypt</label>
+                        <textarea class="form-control" id="text" name="text" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="word" class="form-label">Keyword</label>
+                        <input type="text" class="form-control" id="word" name="word" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Action</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="action" id="encrypt" value="encrypt" checked>
+                                <label class="form-check-label" for="encrypt">Encrypt</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="action" id="decrypt" value="decrypt">
+                                <label class="form-check-label" for="decrypt">Decrypt</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h4 class="card-title">Result</h4>
+            </div>
+            <div class="card-body">
+                <pre>{{ result }}</pre>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
