@@ -1,4 +1,4 @@
-# Vigenère Cipher Django Project
+# Vigenère Cipher Encryptor
 
 This Django project implements a Vigenère cipher application, allowing users to encrypt and decrypt text using a keyword. It includes a web interface built with Django, HTML, CSS, and Bootstrap for a responsive and user-friendly experience.
 
