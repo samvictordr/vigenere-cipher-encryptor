@@ -73,9 +73,3 @@ To run this project locally, follow these steps:
 ## License
 
 This project is licensed under Creative Commons Zero, so feel free to clone and edit to your heart's will! - see the [LICENSE](LICENSE) file for details.
-
----
-
-Replace placeholders (`yourusername`, `vigenere-cipher-django`) with your actual GitHub username and repository name. Ensure you have a `requirements.txt` file listing all dependencies, and adjust the project structure and usage instructions based on your specific implementation.
-
-This README provides a comprehensive guide for users to understand, set up, and use your Vigenère cipher Django project effectively.
